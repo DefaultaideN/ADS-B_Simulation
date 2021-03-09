@@ -28,8 +28,8 @@ import math
 def encode_alt_modes(alt, bit13):
     mbit = False
     qbit = True
-    encalt = (int(alt) + 1000) / 25
-
+    encalt = int((int(alt) + 1000) / 25)
+    print('Encalt = '+str(encalt))
     if bit13 is True:
         tmp1 = (encalt & 0xfe0) << 2
         tmp2 = (encalt & 0x010) << 1
